@@ -3,122 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Electrical Engineering Notes</title>
+  <title>BE Notes | Electrical Engineering</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f4f8;
-      color: #333;
-      text-align: center;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
       padding: 20px;
     }
     h1 {
-      color: #4a90e2;
+      text-align: center;
+      margin-bottom: 10px;
     }
-    .note {
-      margin: 10px;
-      padding: 15px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      display: inline-block;
-      width: 250px;
-    }
-    .note a {
-      text-decoration: none;
-      color: #4a90e2;
-    }
-    .note:hover {
-      background: #f8f8f8;
-    }
-    .category {
-      font-size: 1.2em;
-      color: #333;
-      margin-top: 20px;
+    p {
+      text-align: center;
+      margin-bottom: 30px;
     }
     .search-box {
-      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
       padding: 10px;
       width: 80%;
-      max-width: 300px;
-      border: 1px solid #ddd;
+      max-width: 400px;
       border-radius: 5px;
+      border: none;
     }
-    select {
-      padding: 10px;
-      font-size: 1em;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+    .semester-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .semester {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .semester:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 20px;
+      font-size: 14px;
+    }
+    .contact {
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Electrical Engineering Notes</h1>
-  <input type="text" id="search" class="search-box" placeholder="Search notes...">
-  <br>
-  <select id="semesterSelect">
-    <option value="all">All Semesters</option>
-    <option value="semester1">Semester 1</option>
-    <option value="semester2">Semester 2</option>
-    <option value="semester3">Semester 3</option>
-  </select>
+  <h1>BE Electrical Engineering Notes</h1>
+  <p>Access semester-wise notes easily</p>
 
-  <!-- Semester 1 -->
-  <div class="category" id="semester1">
-    <h2>Semester 1</h2>
-    <div class="note">
-      <h3>Circuit Theory</h3>
-      <a href="notes/circuit_theory.pdf" target="_blank">Download PDF</a>
-    </div>
-    <div class="note">
-      <h3>Mathematics</h3>
-      <a href="notes/mathematics.pdf" target="_blank">Download PDF</a>
-    </div>
+  <div class="search-box">
+    <input type="text" placeholder="Search topics (coming soon)" />
   </div>
 
-  <!-- Semester 2 -->
-  <div class="category" id="semester2">
-    <h2>Semester 2</h2>
-    <div class="note">
-      <h3>Power Systems</h3>
-      <a href="notes/power_systems.pdf" target="_blank">Download PDF</a>
-    </div>
-    <div class="note">
-      <h3>Control Systems</h3>
-      <a href="notes/control_systems.pdf" target="_blank">Download PDF</a>
-    </div>
+  <div class="semester-list">
+    <div class="semester"><a href="#">Semester 1</a></div>
+    <div class="semester"><a href="#">Semester 2</a></div>
+    <div class="semester"><a href="#">Semester 3</a></div>
+    <div class="semester"><a href="#">Semester 4</a></div>
+    <div class="semester"><a href="#">Semester 5</a></div>
+    <div class="semester"><a href="#">Semester 6</a></div>
+    <div class="semester"><a href="#">Semester 7</a></div>
+    <div class="semester"><a href="#">Semester 8</a></div>
   </div>
 
-  <!-- Semester 3 -->
-  <div class="category" id="semester3">
-    <h2>Semester 3</h2>
-    <div class="note">
-      <h3>Signals & Systems</h3>
-      <a href="notes/signals_systems.pdf" target="_blank">Download PDF</a>
+  <footer>
+    <p>&copy; 2025 BE Notes</p>
+    <div class="contact">
+      Contact: <a href="mailto:khambachepasang@gmail.com">khambachepasang@gmail.com</a>
     </div>
-    <div class="note">
-      <h3>Electrical Machines</h3>
-      <a href="notes/electrical_machines.pdf" target="_blank">Download PDF</a>
-    </div>
-  </div>
-
-  <script>
-    // Search functionality
-    document.getElementById('search').addEventListener('input', function () {
-      const search = this.value.toLowerCase();
-      document.querySelectorAll('.note').forEach(note => {
-        note.style.display = note.innerText.toLowerCase().includes(search) ? 'inline-block' : 'none';
-      });
-    });
-
-    // Semester filter
-    document.getElementById('semesterSelect').addEventListener('change', function () {
-      const selected = this.value;
-      document.querySelectorAll('.category').forEach(cat => {
-        cat.style.display = (selected === 'all' || cat.id === selected) ? 'block' : 'none';
-      });
-    });
-  </script>
+  </footer>
 </body>
 </html>
