@@ -1,40 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BE Notes - Home</title>
+  <title>BE Electrical Notes</title>
   <style>
     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #141e30, #243b55);
       color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
     }
-    a {
-      display: block;
-      margin: 15px;
+    h1 {
+      margin-top: 60px;
+      font-size: 36px;
+    }
+    .semester-links {
+      margin: 40px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 80%;
+      max-width: 800px;
+    }
+    .semester-links a {
+      background-color: rgba(255, 255, 255, 0.1);
       color: #00ffff;
-      font-size: 20px;
       text-decoration: none;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 18px;
+      transition: background 0.3s, color 0.3s;
     }
-    a:hover {
-      color: #ffffff;
+    .semester-links a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+    footer {
+      margin-top: auto;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    footer a {
+      color: #00ffff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to BE Electrical Notes</h1>
-  <p>Select your semester:</p>
-  <a href="sem1/index.html">Semester 1</a>
-  <a href="sem2/index.html">Semester 2</a>
-  <a href="sem3/index.html">Semester 3</a>
-  <a href="sem4/index.html">Semester 4</a>
-  <a href="sem5/index.html">Semester 5</a>
-  <a href="sem6/index.html">Semester 6</a>
-  <a href="sem7/index.html">Semester 7</a>
-  <a href="sem8/index.html">Semester 8</a>
+  <h1>BE Electrical Notes</h1>
+  <div class="semester-links">
+    <a href="sem1/index.html">Semester 1</a>
+    <a href="sem2/index.html">Semester 2</a>
+    <a href="sem3/index.html">Semester 3</a>
+    <a href="sem4/index.html">Semester 4</a>
+    <a href="sem5/index.html">Semester 5</a>
+    <a href="sem6/index.html">Semester 6</a>
+    <a href="sem7/index.html">Semester 7</a>
+    <a href="sem8/index.html">Semester 8</a>
+  </div>
+  <footer>
+    Contact: <a href="mailto:khambachepasang@gmail.com">khambachepasang@gmail.com</a>
+  </footer>
 </body>
 </html>
